@@ -1,0 +1,24 @@
+<html>
+
+<body onload="loadFruits()">
+    <button onclick="myFunction()">Add Your Fav Fruit</button>
+    <p id="fruits"></p>
+
+    <script>
+        var fruits=["Banana","Apple","Grapes"];
+
+        function loadFruits(){
+            document.getElementById("fruits").innerHTML = fruits; 
+        }
+
+        function myFunction(){
+            var fruit = prompt("What is your favorite fruit?");
+            fruits[fruits.length]=fruit;
+            document.getElementById("fruits").innerHTML = fruits;
+        }
+    </script>    
+
+
+
+</body>
+</html>    

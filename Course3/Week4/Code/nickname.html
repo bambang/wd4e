@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Nickname</title>
+    <style>
+        input{
+            border: 1px solid black;
+        }
+        input:focus{
+            background-color: lightblue;
+        }
+        #displayinput{
+            margin-left: 4%;
+            display: none;
+            
+        }
+    </style>	
+</head>
+<body>
+    
+    
+    <form action="">
+        <fieldset>
+            <legend>Form Verification</legend>
+
+            First Name:<br> <input type="text" name="fName" id="fName" required><br>
+            Last Name:<br>  <input type="text" name="lName" id="lName" required><br>
+            Nickname?:<input id="yes" name="Nick" type="checkbox" onchange="NickClickedFunction()" /><br>
+            
+            <div id="displayinput">
+                <input type="text" name="NickInput" id="NickInput" ><br>
+            </div>    
+
+            <input type="submit" value="Verify">  
+
+        </fieldset>
+    </form>
+
+    <script>
+        function NickClickedFunction(){
+            
+            if(yes.checked){  
+                displayinput.style.display = "inline";
+                NickInput.setAttribute('required',true);
+            }
+            else{
+                NickInput.removeAttribute('required');
+                displayinput.style.display="none";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
